@@ -654,10 +654,613 @@ nav a:hover, nav a.active {
 /* --- Products Section Architecture (Premium Tech Blue Image BG Theme) --- */
 .prds-section {
     padding: 100px 0;
-    /* Merges a rich tech-blue gradient overlay with your background image asset */
-    background-image: url(./img_files/white-minimal-abstract-background-with-light-blue-gradient-dot-wave-vector.jpg);
-    background-size: cover;
+    background-image: url(./img_files/download.jpeg);
+    background-size: 100% 100%;
     background-attachment: scroll; 
     color: #ffffff;
     position: relative;
+}
+.hero {
+    position: relative; /* Crucial: pins the video to this container */
+    overflow: hidden;    /* Prevents video overflow from creating scrollbars */
+    padding: 100px 0;    /* Keep or adjust your existing padding */
+    background-color: #0a0f1d; 
+}
+
+/* Stretches the video to act as a flawless cover background */
+.hero-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; 
+    z-index: 0;        /* Sits underneath everything */
+}
+
+/* Forces your text, container, and layout on top of the video layer */
+.hero-container {
+    position: relative;
+    z-index: 2; /* Bumps text above the video and any overlays */
+}
+/* Container that splits the screen 50/50 */
+.hero-split {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Makes the section fill the entire screen height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Left Half Layout */
+.hero-left-pane {
+    flex: 1;                     /* Takes up exactly 50% width */
+    background-color: #001f4d;   /* Your deep Navy Blue color */
+    display: flex;
+    align-items: center;         /* Centers text vertically */
+    justify-content: flex-end;   /* Pushes content toward the center alignment line */
+    padding: 60px;
+    color: #ffffff;
+}
+
+/* Constrains text inside the left pane so it doesn't hug the screen edge */
+.hero-text-content {
+    max-width: 550px; 
+    width: 100%;
+}
+
+.hero-text-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #e0e6ed; /* Slightly softer white for better readability on navy */
+}
+
+/* Right Half Layout */
+.hero-right-pane {
+    flex: 1;                     /* Takes up exactly the other 50% width */
+    position: relative;
+    height: auto;
+}
+
+/* Full-bleed Video Styling */
+.hero-split-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;           /* Forces video to fill its 50% container edge-to-edge */
+    object-position: top;        /* Keeps the top section of your motor video perfectly framed */
+    display: block;
+}
+
+/* CTA Button Styling */
+.btn-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #001f4d;              /* Matches your navy blue theme */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustment for Mobile Devices */
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;  /* Stacks them vertically on phones */
+    }
+    .hero-left-pane, .hero-right-pane {
+        flex: none;
+        width: 100%;
+    }
+    .hero-right-pane {
+        height: 400px;           /* Gives video a fixed height block on mobile views */
+    }
+}
+.hero-split {
+    display: flex;
+    width: 100%;
+    height: 400px; /* Forces the entire section to be exactly 400px tall */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Left Pane (Navy Blue) */
+.hero-left-pane {
+    flex: 0 0 50%;             /* Locks this pane to exactly 50% width */
+    background-color: #001f4d;   
+    display: flex;
+    align-items: center;         
+    justify-content: flex-end;   
+    padding: 40px;             /* Reduced padding slightly to fit the 400px height nicely */
+    color: #ffffff;
+    height: 100%;
+}
+
+/* Right Pane (Video Container) */
+.hero-right-pane {
+    flex: 0 0 50%;             /* Locks this pane to exactly 50% width */
+    height: 100%;
+    position: relative;
+}
+
+/* The Video Asset */
+.hero-split-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Fills the 50% width and 400px height frame perfectly */
+    object-position: top;      /* Keeps the focus on the top portion of your motor video */
+    display: block;
+}
+/* Left Pane (Now restored to your original bright blue background) */
+.hero-left-pane {
+    flex: 0 0 50%;             /* Locks this pane to exactly 50% width */
+    background-color: #0046be;   /* RESTORED: Your original bright electric blue */
+    display: flex;
+    align-items: center;         
+    justify-content: flex-end;   
+                 
+    color: #ffffff;
+    height: 100%;
+}
+
+/* Also update your CTA button color so it matches the text background on hover/active states if needed */
+.btn-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ffffff;
+    color: #0046be;              /* Updated to match your original blue theme */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+/* ==========================================================================
+   BRIGHT GLASS-NEON TECHNOLOGICAL EDGE SECTION
+   ========================================================================== */
+
+.tech-edge-section {
+    padding: 120px 0;
+    /* High-end midnight gradient with subtle translucent blue backlighting */
+    background: radial-gradient(circle at 50% 50%, #0a162e 0%, #030712 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle fluid background light beams mimicking the uploaded style */
+.tech-edge-section::before {
+    content: '';
+    position: absolute;
+    top: -10%; left: -10%; width: 50%; height: 50%;
+    background: radial-gradient(circle, rgba(0, 163, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.tech-edge-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tech-edge-header .section-tagline {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #00f0ff; /* Vivid electric neon cyan */
+    font-weight: 800;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.tech-edge-title {
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #ffffff 40%, #a5c7f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tech-edge-subtitle {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Layout Architecture Engine --- */
+.tech-edge-layout {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Completely Static Core Sphere with Extreme Glow --- */
+.tech-edge-center-fixed {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.center-glow-ring-static {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(0, 240, 255, 0.3);
+    border-radius: 50%;
+    box-shadow: inset 0 0 30px rgba(0, 163, 255, 0.1), 0 0 30px rgba(0, 163, 255, 0.1);
+}
+
+.center-core-sphere-fixed {
+    width: 150px;
+    height: 150px;
+    /* Bright fluid core gradient */
+    background: radial-gradient(circle at 35% 35%, #00f0ff 0%, #0044ff 50%, #001133 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 60px rgba(0, 163, 255, 0.7), 
+                0 0 120px rgba(0, 240, 255, 0.3),
+                inset 0 4px 20px rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+.center-core-sphere-fixed svg {
+    width: 55px;
+    height: 55px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+}
+
+/* --- Equal Spacing Orbital Track Ring --- */
+.tech-track-ring {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: 10;
+    animation: trackOrbitClockwise 45s linear infinite;
+}
+
+/* Individual node anchor settings */
+.orbit-node {
+    position: absolute;
+    width: 330px;
+    height: 110px;
+    margin-top: -55px;  /* Center the block over its path coordinate */
+    margin-left: -165px; 
+    animation: counterBlockRotate 45s linear infinite;
+}
+
+/* Mathematical Distribution Engine:
+   Calculated around a 500px diameter ring (250px radius out from center point 50% 50%)
+   using angles incremented precisely by 72 degrees.
+*/
+.node-1 { top: 50%; left: calc(50% + 260px); }                                    /* 0 deg */
+.node-2 { top: calc(50% + 247px); left: calc(50% + 80px); }                      /* 72 deg */
+.node-3 { top: calc(50% + 153px); left: calc(50% - 210px); }                     /* 144 deg */
+.node-4 { top: calc(50% - 153px); left: calc(50% - 210px); }                     /* 216 deg */
+.node-5 { top: calc(50% - 247px); left: calc(50% + 80px); }                      /* 288 deg */
+
+/* --- Glassmorphic Neon Cards --- */
+.edge-card {
+    /* Highly transparent bright glass panels */
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 22px;
+    border-radius: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
+}
+
+.edge-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+}
+
+.edge-card p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* --- Dynamic Colorful Icon System --- */
+.edge-icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.edge-icon-box svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Bright Color Scheme Configurations */
+.bg-cyan   { background: linear-gradient(135deg, #00f0ff, #007799); color: #fff; }
+.bg-blue   { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
+.bg-purple { background: linear-gradient(135deg, #a855f7, #6b21a8); color: #fff; }
+.bg-lime   { background: linear-gradient(135deg, #ccff00, #4d7c0f); color: #000; }
+.bg-amber  { background: linear-gradient(135deg, #f59e0b, #b45309); color: #fff; }
+
+/* Glowing Border Profiles on Hover */
+.border-neon-cyan:hover  { border-color: #00f0ff; box-shadow: 0 0 25px rgba(0, 240, 255, 0.35); transform: scale(1.04); }
+.border-neon-blue:hover  { border-color: #3b82f6; box-shadow: 0 0 25px rgba(59, 130, 246, 0.35); transform: scale(1.04); }
+.border-neon-purple:hover{ border-color: #a855f7; box-shadow: 0 0 25px rgba(168, 85, 247, 0.35); transform: scale(1.04); }
+.border-neon-lime:hover  { border-color: #ccff00; box-shadow: 0 0 25px rgba(204, 255, 0, 0.35); transform: scale(1.04); }
+.border-neon-amber:hover { border-color: #f59e0b; box-shadow: 0 0 25px rgba(245, 158, 11, 0.35); transform: scale(1.04); }
+
+/* Pause on interaction */
+.tech-track-ring:hover, 
+.tech-track-ring:hover .orbit-node {
+    animation-play-state: paused;
+}
+
+/* --- Clockwise Orbit Engine Animations --- */
+@keyframes trackOrbitClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes counterBlockRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS FALLBACK
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .tech-edge-layout {
+        height: auto;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .tech-track-ring {
+        position: relative;
+        width: 100%;
+        height: auto;
+        animation: none; 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .orbit-node {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: 0 !important;
+        animation: none;
+    }
+    
+    .tech-edge-center-fixed {
+        position: relative;
+        order: -1; 
+        margin-bottom: 10px;
+    }
+    
+    .edge-card:hover {
+        transform: translateY(-4px) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .edge-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* ==========================================================================
+   MINIMAL TECH SITE FOOTER
+   ========================================================================== */
+
+.site-footer {
+    background-color: #030712; /* Rich dark midnight background */
+    color: #ffffff;
+    padding: 80px 0 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* --- Top Layout Grid --- */
+.footer-top-grid {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Branding Column Styling */
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+}
+
+.footer-slogan {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+/* Links Columns Styling */
+.footer-links-col h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+}
+
+.footer-links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links-col ul li a {
+    font-size: 13.5px;
+    color: #94a3b8;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.25s ease;
+}
+
+.footer-links-col ul li a:hover {
+    color: #00f0ff; /* Subtle hover pop color matching your navigation scheme */
+}
+
+/* --- Center Section Divider Line --- */
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 0 0 40px 0;
+}
+
+/* --- Bottom Alignment Architecture --- */
+.footer-bottom-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+}
+
+/* Circular Outlined Social Action Links */
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.social-circle {
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-circle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social-circle:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Standardized Small Print Text Elements */
+.footer-copyright {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* --- Complete Layout Responsiveness System --- */
+@media (max-width: 992px) {
+    .footer-top-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .footer-brand-col {
+        grid-column: span 2;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-footer {
+        padding: 60px 0 30px 0;
+    }
+
+    .footer-top-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand-col {
+        grid-column: span 1;
+    }
+    
+    .footer-links-col h3 {
+        margin-bottom: 12px;
+    }
 }

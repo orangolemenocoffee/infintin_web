@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
 </head>
-<body>
+<body style="margin: 0; padding: 0;">
 
-    <header>
+    <header style="position: sticky; top: 0; z-index: 1000; margin-bottom: 0; padding-bottom: 0;">
         <div class="container nav-container">
             <div class="logo">
                 <img src="./img_files/logov1.png" alt="INFINITIN Logo">
@@ -20,94 +20,90 @@
                 <a href="./index.html" class="active">Home</a>
                 <a href="#aboutus">About Us</a>
                 <a href="#products">Products</a>
-                <a href="#">Technology</a>
+                <a href="#tech-edge">Technology</a>
                 <a href="./hvac.html">HVAC & Automation</a>
                 <a href="./contact.html">Contact Us</a>
-                </nav>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
+    <!-- 50/50 Video Split Hero Section (Height restricted to 400px with zero structural margins) -->
+    <section class="hero-split" style="display: flex; width: 100%; height: 400px; margin: 0 !important; padding: 0 !important; overflow: hidden;">
+        <div class="hero-left-pane" style="flex: 0 0 50%; background-color: #0046be; display: flex; align-items: center; justify-content: flex-end; padding: 40px; color: #ffffff; height: 100%;">
+            <div class="hero-text-content" style="max-width: 550px; width: 100%;">
                 <h1>Advancing <br><span class="highlight-text">Rare-Earth-Free</span><br> Electric Motors <br>India’s Clean Mobility Future</h1>
                 <p>We design and manufacture <strong>high-performance, ultra-efficient electric motors</strong>, that are driving the <strong>future of mobility.</strong></p>
-                <a href="#aboutus" class="btn-cta">Get Started Now &rarr;</a>
+                <a href="#products" class="btn-cta">Get Started Now &rarr;</a>
             </div>
-            <div class="hero-images">
-                <img src="./img_files/Motor-1.png" alt="infintin motors" class="hero-mask-img">
+        </div>
+        
+        <div class="hero-right-pane" style="flex: 0 0 50%; height: 100%; position: relative;">
+            <video autoplay loop muted playsinline class="hero-split-video" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;">
+                <source src="./img_files/14804689_1080_1920_24fps.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- About Us Section (Pulled flush against the video section with zero top margins) -->
+    <section id="aboutus" class="aboutus-section" style="margin-top: 0 !important; padding-top: 60px;">
+        <div class="container">
+            <div class="aboutus-grid">
+                <div class="aboutus-content">
+                    <h1><span class="section-tagline" style="font-size: 23px;">About Us</span></h1>
+                    <h2 class="section-title">Pioneering Technology</h2>
+                    
+                    <div class="cards-wrapper">
+                        <div class="tech-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="card-text">
+                                <h3>Our Vision</h3>
+                                <p>To enable sustainable mobility and industrial automation by delivering high-efficiency motors that do not depend on rare earth materials. We are reimagining electric propulsion through rare-earth-free motor design tailored for Indian operating conditions.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="card-text">
+                                <h3>Our Approach</h3>
+                                <p>Our approach reduces dependence on resource-constrained materials and optimizes design to deliver high-performance, environmentally responsible powertrains.</p>
+                            </div>
+                        </div>
+
+                        <div class="tech-card">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                                    <line x1="9" y1="22" x2="9" y2="16"/>
+                                    <line x1="15" y1="22" x2="15" y2="16"/>
+                                </svg>
+                            </div>
+                            <div class="card-text">
+                                <h3>Our Commitment</h3>
+                                <p>To achieve this, we are establishing a product and research hub for traction motor development, deeply aligned with the national imperatives of <span class="brand-highlight">“Make in India”</span> and <span class="brand-highlight">“Atmanirbhar Bharat.”</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aboutus-visual">
+                    <div class="blob-shape-bg"></div>
+                    <img src="./img_files/Motor-1.png" alt="INFINITIN Motor Graphic" class="aboutus-img">
+                    <div class="dot-pattern"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="aboutus">
-            
-<section id="aboutus" class="aboutus-section">
-    <div class="container">
-        
-        <div class="aboutus-grid">
-            
-            <div class="aboutus-content">
-                <span class="section-tagline">About Us</span>
-                <h2 class="section-title">Pioneering Technology</h2>
-                
-                <div class="cards-wrapper">
-                    <div class="tech-card">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </div>
-                        <div class="card-text">
-                            <h3>Our Vision</h3>
-                            <p>To enable sustainable mobility and industrial automation by delivering high-efficiency motors that do not depend on rare earth materials. We are reimagining electric propulsion through rare-earth-free motor design tailored for Indian operating conditions.</p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <div class="card-text">
-                            <h3>Our Approach</h3>
-                            <p>Our approach reduces dependence on resource-constrained materials and optimizes design to deliver high-performance, environmentally responsible powertrains.</p>
-                        </div>
-                    </div>
-
-                    <div class="tech-card">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-                                <line x1="9" y1="22" x2="9" y2="16"/>
-                                <line x1="15" y1="22" x2="15" y2="16"/>
-                            </svg>
-                        </div>
-                        <div class="card-text">
-                            <h3>Our Commitment</h3>
-                            <p>To achieve this, we are establishing a product and research hub for traction motor development, deeply aligned with the national imperatives of <span class="brand-highlight">“Make in India”</span> and <span class="brand-highlight">“Atmanirbhar Bharat.”</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aboutus-visual">
-                <div class="blob-shape-bg"></div>
-                <img src="./img_files/Motor-1.png" alt="INFINITIN Motor Graphic" class="aboutus-img">
-                <div class="dot-pattern"></div>
-            </div>
-            
-        </div>
-
-       
-    </div>
-</section>
-
-    </div>
-
-
+ 
     <div class="prds">
 
         <section id="products" class="prds-section">
@@ -127,7 +123,7 @@
                     <div class="prd-card">
                         <div class="prd-img-box">
                             <div class="img-bg-circle"></div>
-                            <img src="./img_files/Motor-1.png" alt="Switched Reluctance Motor">
+                            <img src="./img_files/srw.png" alt="Switched Reluctance Motor">
                         </div>
                         <div class="prd-info">
                             <h3>Switched Reluctance Motor</h3>
@@ -144,7 +140,7 @@
                     <div class="prd-card">
                         <div class="prd-img-box">
                             <div class="img-bg-circle"></div>
-                            <img src="./img_files/Motor-1.png" alt="Intelligent Power Converter">
+                            <img src="./img_files/ipc.png" alt="Intelligent Power Converter">
                         </div>
                         <div class="prd-info">
                             <h3>Intelligent Power Converter</h3>
@@ -160,7 +156,7 @@
                     <div class="prd-card">
                         <div class="prd-img-box">
                             <div class="img-bg-circle"></div>
-                            <img src="./img_files/Motor-1.png" alt="1kW Motor">
+                            <img src="./img_files/1kw motor.png" alt="1kW Motor">
                         </div>
                         <div class="prd-info">
                             <h3>1kW Motor</h3>
@@ -176,7 +172,7 @@
                     <div class="prd-card">
                         <div class="prd-img-box">
                             <div class="img-bg-circle"></div>
-                            <img src="./img_files/Motor-1.png" alt="4kW Motor">
+                            <img src="./img_files/4kw motor.png" alt="4kW Motor">
                         </div>
                         <div class="prd-info">
                             <h3>4kW Motor</h3>
@@ -192,7 +188,7 @@
                     <div class="prd-card">
                         <div class="prd-img-box">
                             <div class="img-bg-circle"></div>
-                            <img src="./img_files/Motor-1.png" alt="15kW Motor">
+                            <img src="./img_files/15kw motor.png" alt="15kW Motor">
                         </div>
                         <div class="prd-info">
                             <h3>15kW Motor</h3>
@@ -278,6 +274,151 @@
     });
 </script>
     </div>
+
+<div class="tech-edge">
+<section class="tech-edge-section" id="tech-edge">
+    <div class="container">
+        
+        <div class="tech-edge-header">
+            <span class="section-tagline">Innovation & Precision</span>
+            <h2 class="tech-edge-title">Our Technological Edge</h2>
+            <p class="tech-edge-subtitle">Innovation in every component, precision in every process.</p>
+        </div>
+
+        <div class="tech-edge-layout">
+            
+            <div class="tech-track-ring">
+                
+                <div class="orbit-node node-1">
+                    <div class="edge-card border-neon-cyan">
+                        <div class="edge-icon-box bg-cyan">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="edge-content">
+                            <h3>Rare Earth Free Architecture</h3>
+                            <p>Sustainable design that eliminates reliance on critical materials.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit-node node-2">
+                    <div class="edge-card border-neon-blue">
+                        <div class="edge-icon-box bg-blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>
+                        </div>
+                        <div class="edge-content">
+                            <h3>Better Thermal Management</h3>
+                            <p>Advanced cooling systems for peak performance under any condition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit-node node-3">
+                    <div class="edge-card border-neon-purple">
+                        <div class="edge-icon-box bg-purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="edge-content">
+                            <h3>Minimal Maintenance Cost</h3>
+                            <p>Robust design for long-lasting performance with minimal upkeep.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit-node node-4">
+                    <div class="edge-card border-neon-lime">
+                        <div class="edge-icon-box bg-lime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="edge-content">
+                            <h3>Reduced Lead Time</h3>
+                            <p>Streamlined production and local sourcing for faster delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit-node node-5">
+                    <div class="edge-card border-neon-amber">
+                        <div class="edge-icon-box bg-amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div class="edge-content">
+                            <h3>Supply Chain Resilience</h3>
+                            <p>Locally sourced materials for a stable production line.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tech-edge-center-fixed">
+                <div class="center-glow-ring-static"></div>
+                <div class="center-core-sphere-fixed">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top-grid">
+            
+            <div class="footer-brand-col">
+                <h2 class="footer-logo">INFINITIN</h2>
+                <span class="footer-slogan">MOBILITY SOLUTIONS</span>
+            </div>
+
+            <div class="footer-links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h3>Our Tech</h3>
+                <ul>
+                    <li><a href="#tech-edge">Technology</a></li>
+                    <li><a href="./hvac.html">HVAC & Automation</a></li>
+                   
+                </ul>
+            </div>
+
+           
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom-area">
+            
+            <div class="footer-socials">
+                <a href="#" class="social-circle" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="social-circle" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/company/infintin/posts/?feedView=all" class="social-circle" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="social-circle" aria-label="Global">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </a>
+            </div>
+
+            <p class="footer-copyright">&copy; 2026 INFINITIN Mobility Solutions. All rights reserved.</p>
+            
+        </div>
+
+    </div>
+</footer>
 
 </body>
 </html>
