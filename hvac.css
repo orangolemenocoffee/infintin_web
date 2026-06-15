@@ -80,24 +80,36 @@ nav a.active{
     color:#0046be;
 }
 @media (max-width: 992px) {
-    .nav-container {
-        flex-direction: column; /* Stacks logo above link menu on mid-size/tablets */
+
+    .nav-container{
+        flex-direction: column;
         text-align: center;
-        padding: 10px 0;
+        padding: 30px 0;
     }
-    nav {
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
+    nav a{
+        width: 30%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-    nav {
-        gap: 10px 15px; /* Adds clean spacing block wrap on narrow mobile viewports */
+    nav{
+        display:grid;
+        grid-template-columns:repeat(3, auto);
+        justify-content:center;
+        gap:12px 20px;
     }
-    nav a {
-        font-size: 11px; /* Slightly scaled-down link menu items for small devices */
+
+    nav a{
+        font-size:11px;
     }
 }
 
