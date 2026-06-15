@@ -82,6 +82,28 @@ nav a:hover{
 nav a.active{
     color:#0046be;
 }
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column; /* Stacks logo above link menu on mid-size/tablets */
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 10px 15px; /* Adds clean spacing block wrap on narrow mobile viewports */
+    }
+    nav a {
+        font-size: 11px; /* Slightly scaled-down link menu items for small devices */
+    }
+}
 body{
     margin:0;
     padding:0;
