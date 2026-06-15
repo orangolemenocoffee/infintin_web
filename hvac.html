@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC & Automation</title>
+
+    <link rel="stylesheet" href="hvac.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+
+            <div class="logo">
+                <img src="./img_files/logov1.png" alt="INFINITIN Logo">
+            </div>
+
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#aboutus">About Us</a>
+                <a href="./index.html#products">Products</a>
+                <a href="./index.html#tech-edge">Technology</a>
+                <a href="./hvac.html" class="active">HVAC & Automation</a>
+                <a href="./contact.html">Contact Us</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="prds-section">
+
+        <div class="container prds-container-relative">
+
+            <div class="prds-header">
+                <h1 class="section-title">Our Products</h1>
+                <h2 class="section-subtitle">
+                    Engineered for excellence, tailored for performance.
+                </h2>
+            </div>
+
+            <div class="carousel-outer-wrapper">
+
+                <button class="carousel-nav-btn prev-btn">&#10094;</button>
+
+                <div class="prds-carousel-container">
+
+                    <div class="prds-track">
+
+                        <div class="prd-card">
+                        <div class="prd-img-box">
+                            <div class="img-bg-circle"></div>
+                            <img src="./img_files/srw.png" alt="Switched Reluctance Motor">
+                        </div>
+                        <div class="prd-info">
+                            <h3>BLDC FCU MOTOR + CONTROLLER : 0.075-0.5 KW</h3>
+                            <span class="prd-spec-tag">PRIMARY . HVAC . </span>
+                            <ul class="prd-features">
+                                <li>Efficiency up to 91.69%</li>
+                                <li>Price starts at ₹13,500 for the 0.075 kW model</li>
+                                <li>No rare earth materials used</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="prd-img-box">
+                            <div class="img-bg-circle"></div>
+                            <img src="./img_files/ipc.png" alt="Intelligent Power Converter">
+                        </div>
+                        <div class="prd-info">
+                            <h3>BLDC AGV MOTOR + DRIVE : 1-3 HP</h3>
+                            <span class="prd-spec-tag">PRIMARY . AGV . </span>
+                            <ul class="prd-features">
+                                <li>Features high-performance Precision FOC control</li>
+                                <li>Starting price of ₹45,000 for the 0.7 kW model</li>
+                                <li>Completely free of heavy rare earth materials</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="prd-img-box">
+                            <div class="img-bg-circle"></div>
+                            <img src="./img_files/1kw motor.png" alt="1kW Motor">
+                        </div>
+                        <div class="prd-info">
+                            <h3>SRM AHU MOTOR + CONTROLLER : 4-13 HP</h3>
+                            <span class="prd-spec-tag">HVAC . LARGER . </span>
+                            <ul class="prd-details-grid">
+                                <li>Meets premium IE4–IE5 efficiency classifications</li>
+                                <li>Starting price of ₹75,000 for the 3.75 kW model</li>
+                                <li>Offers healthy profit margins ranging from 43% to 50%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="prd-card">
+                        <div class="prd-img-box">
+                            <div class="img-bg-circle"></div>
+                            <img src="./img_files/4kw motor.png" alt="4kW Motor">
+                        </div>
+                        <div class="prd-info">
+                            <h3>MOTOR CONTROL & AFTER-SALES : AMC & SVC</h3>
+                            <span class="prd-spec-tag">RECURRING</span>
+                            <ul class="prd-details-grid">
+                                <li>Annual Maintenance Contract priced at ₹19,500/year for 4 kW units</li>
+                                <li>Delivers high-yielding service margins of 70% to 80%</li>
+                                <li>Maintains a consistent 30% customer attach rate</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            
+                
+
+                <button class="carousel-nav-btn next-btn">&#10095;</button>
+
+            </div>
+
+            <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            </div>
+        </div>
+
+    </section>
+<script>
+const track = document.querySelector('.prds-carousel-container');
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const dots = document.querySelectorAll('.dot');
+
+function getCardWidth() {
+    const card = document.querySelector('.prd-card');
+    return card.offsetWidth + 30;
+}
+
+function updateDots() {
+
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const scroll = track.scrollLeft;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    if (scroll <= maxScroll * 0.25) {
+        dots[0].classList.add('active');
+    }
+    else if (scroll <= maxScroll * 0.75) {
+        dots[1].classList.add('active');
+    }
+    else {
+        dots[2].classList.add('active');
+    }
+}
+
+nextBtn.addEventListener('click', () => {
+    track.scrollBy({
+        left: getCardWidth(),
+        behavior: 'smooth'
+    });
+});
+
+prevBtn.addEventListener('click', () => {
+    track.scrollBy({
+        left: -getCardWidth(),
+        behavior: 'smooth'
+    });
+});
+
+track.addEventListener('scroll', updateDots);
+
+updateDots();
+</script>
+    
+
+</body>
+</html>
