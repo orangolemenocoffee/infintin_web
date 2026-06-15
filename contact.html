@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<link rel="stylesheet" href="contact.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
@@ -30,221 +26,211 @@
         </div>
     </header>
 
-<section class="contact-section">
+    <section class="contact-section">
+        <div class="contact-container">
 
-    <div class="contact-container">
+            <div class="contact-info">
+                <h1>Get in Touch</h1>
+                <p class="subtitle">We'd love to hear from you!</p>
+                <p class="description">
+                    Have questions, suggestions, or just want to say hello?
+                    Fill out the form and we'll get back to you as soon as possible.
+                </p>
 
-        <!-- Left Side -->
-        <div class="contact-info">
-
-            <h1>Get in Touch</h1>
-
-            <p class="subtitle">
-                We'd love to hear from you!
-            </p>
-
-            <p class="description">
-                Have questions, suggestions, or just want to say hello?
-                Fill out the form and we'll get back to you as soon as possible.
-            </p>
-
-            <div class="contact-details">
-
-                <div class="detail">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>admin@infintin.in</span>
+                <div class="contact-details">
+                    <div class="detail">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>admin@infintin.in</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91-9962608717</span>
+                    </div>
                 </div>
 
-                <div class="detail">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>+91-9962608717</span>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/infintin/"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-
             </div>
 
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/company/infintin/"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-
-        </div>
-
-        <!-- Right Side -->
-        <div class="contact-form">
-
-            <form>
-
-                <div class="row">
-
-                    <div class="input-group">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" name="firstName" placeholder="First Name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" name="lastName" placeholder="Last Name" required>
+                        </div>
                     </div>
 
                     <div class="input-group">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Last Name">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="yourmail@example.com" required>
                     </div>
 
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" name="subject" placeholder="Enter subject" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 class="team-main-title">Meet Our Team</h2>
+        <h3 class="team-subtitle">Founders</h3>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/founder1.png" alt="Dr. Augustine">
+                    <h3>Dr. Augustine</h3>
+                    <p>Founder - Machine Design</p>
                 </div>
-
-                <div class="input-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="yourmail@example.com">
+                <div class="card-back">
+                    <h3>Dr. Augustine</h3>
+                    <p>
+                        He has expertise in Design, development and testing of Switched Reluctance Motor, Structural behavior of electric motor, Thermal behavior of electric motor, Material analysis for electric motor.
+                    </p>
+                    <a href="https://www.linkedin.com/in/mg-augustine/" class="linkedin-btn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
+            </div>
 
-                <div class="input-group">
-                    <label>Subject</label>
-                    <input type="text" placeholder="Enter subject">
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/founder2.png" alt="Mr. Infantraj">
+                    <h3>Mr. Infantraj</h3>
+                    <p>Founder - Embedded Systems</p>
                 </div>
-
-                <div class="input-group">
-                    <label>Message</label>
-                    <textarea rows="6" placeholder="Write your message..."></textarea>
+                <div class="card-back">
+                    <h3>Mr. Infantraj</h3>
+                    <p>
+                       He has expertise in Design, development and testing of PM BLDC motor, Modelling and analysis of Fuel cell, Machine learning & Deep learning applications to condition monitoring of electrical motors.
+                    </p>
+                    <a href="https://www.linkedin.com/in/ainfantraj/" class="linkedin-btn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
+            </div>
 
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/founder3.png" alt="Mr. Chandrasekhar">
+                    <h3>Mr. Chandrasekhar</h3>
+                    <p>Founder - Manufacturing & Finance</p>
+                </div>
+                <div class="card-back">
+                    <h3>Mr. Chandrasekhar</h3>
+                    <p>
+                        Experience in design of machine components and simulation for structural and thermal analysis. Worked on project management and mechatronics systems.
+                    </p>
+                    <a href="LINKEDIN_URL_3" class="linkedin-btn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-    </div>
+        <h3 class="team-subtitle advisory">Advisory Board</h3>
 
-</section>
-
-<section class="team-section">
-
-    <h2 class="team-main-title">Meet Our Team</h2>
-
-    <h3 class="team-subtitle">Founders</h3>
-
-    <div class="team-grid">
-
-        <div class="team-card">
-
-            <div class="card-front">
-                <img src="images/founder1.png"">
-                <h3>Dr. Augustine</h3>
-                <p>Founder - Machine Design</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/advisor1.png" alt="Mr. Karthik Anbalagan">
+                    <h3>Mr. Karthik Anbalagan</h3>
+                    <p>Consultant - Marketing</p>
+                </div>
+                <div class="card-back">
+                    <h3>Marketing Expert</h3>
+                    <p style="font-size: small;">
+                        He is a seasoned marketing strategist with over two decades of experience in helping brands scale through sharp positioning, compelling storytelling, and sales-driven campaigns. With a strong foundation in branding, digital marketing, and go-to-market (GTM) strategy, he has successfully guided startups and established businesses across industries—ranging from FinTech, Manufacturing, to Consumer Goods.
+                    </p>
+                </div>
             </div>
 
-            <div class="card-back">
-                <h3>Dr. Augustine</h3>
-                <p>
-                    He has expertise in Design, development and testing of Switched Reluctance Motor, Structural behavior of electric motor, Thermal behavior of electric motor, Material analysis for electric motor.
-                </p>
-                <a href="https://www.linkedin.com/in/mg-augustine/" class="linkedin-btn" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/advisor2.png" alt="Dr. Senthilkumaran">
+                    <h3>Dr. Senthilkumaran</h3>
+                    <p>Consultant - Control Design Engineer</p>
+                </div>
+                <div class="card-back">
+                    <h3>Control Systems Specialist</h3>
+                    <p>
+                        He has expertise in Design, Applied Electronics and System Dynamics for Control, Feedback Control Systems in robotics and autonomous machines. By integrating advanced control mechanisms with real-world engineering challenges, his research drives innovation in automation and intelligent systems.
+                    </p>
+                </div>
             </div>
 
+            <div class="team-card">
+                <div class="card-front">
+                    <img src="images/advisor3.png" alt="Wg. Cdr. Edward Jeyaseelan Kennedy">
+                    <h3>Wg. Cdr. Edward Jeyaseelan Kennedy (Retd)</h3>
+                    <p>Consultant - Admin & Production Engineer</p>
+                </div>
+                <div class="card-back">
+                    <h3>Operations Advisor</h3>
+                    <p style="font-size: small;">
+                        He Is a graduate in Mechanical Engineering and Post Graduate in Manufacturing Technology. Served in the Indian Airforce for 23 years. An expert in maintenance of MI-8 and MI-17 helicopters and overhaul of aero-engines during which gained expertise in machining, NDT, balancing of rotors, micrometry, thermal spraying, heat treatment, formulation of work packages and records.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="team-card">
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop the page from refreshing
 
-            <div class="card-front">
-                <img src="images/founder2.png" alt="">
-                <h3>Mr. Infantraj</h3>
-                <p>Founder - Embedded Systems</p>
-            </div>
+            const submitButton = this.querySelector('.btn');
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
 
-            <div class="card-back">
-                <h3>Mr. Infantraj</h3>
-                <p>
-                   He has expertise in Design, development and testing of PM BLDC motor, Modelling and analysis of Fuel cell, Machine learning & Deep learning applications to condition monitoring of electrical motors.
-                </p>
-                <a href="https://www.linkedin.com/in/ainfantraj/" class="linkedin-btn" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-
-        </div>
-
-        <div class="team-card">
-
-            <div class="card-front">
-                <img src="images/founder3.png" alt="">
-                <h3>Mr. Chandrasekhar</h3>
-                <p>Founder - Manufacturing & Finance</p>
-            </div>
-
-            <div class="card-back">
-                <h3>Mr. Chandrasekhar</h3>
-                <p>
-                    Experience in design of machine components and simulation for structural and thermal analysis. Worked on project management and mechatronics systems.
-                </p>
-                <a href="LINKEDIN_URL_3" class="linkedin-btn" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-    <h3 class="team-subtitle advisory">Advisory Board</h3>
-
-    <div class="team-grid">
-
-        <div class="team-card">
-
-            <div class="card-front">
-                <img src="images/advisor1.png" alt="">
-                <h3>Mr. Karthik Anbalagan</h3>
-                <p>Consultant - Marketing</p>
-            </div>
-
-            <div class="card-back">
-                <h3>Marketing Expert</h3>
-                <p style="font-size: small;">
-                    He is a seasoned marketing strategist with over two decades of experience in helping brands scale through sharp positioning, compelling storytelling, and sales-driven campaigns. With a strong foundation in branding, digital marketing, and go-to-market (GTM) strategy, he has successfully guided startups and established businesses across industries—ranging from FinTech, Manufacturing, to Consumer Goods.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="team-card">
-
-            <div class="card-front">
-                <img src="images/advisor2.png" alt="">
-                <h3>Dr. Senthilkumaran</h3>
-                <p>Consultant - Control Design Engineer</p>
-            </div>
-
-            <div class="card-back">
-                <h3>Control Systems Specialist</h3>
-                <p>
-                    He has expertise in Design, Applied Electronics and System Dynamics for Control, Feedback Control Systems in robotics and autonomous machines. By integrating advanced control mechanisms with real-world engineering challenges, his research drives innovation in automation and intelligent systems.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="team-card">
-
-            <div class="card-front">
-                <img src="images/advisor3.png" alt="">
-                <h3>Wg. Cdr. Edward Jeyaseelan Kennedy (Retd)</h3>
-                <p>Consultant - Admin & Production Engineer</p>
-            </div>
-
-            <div class="card-back">
-                <h3>Operations Advisor</h3>
-                <p style="font-size: small;">
-                    He Is a graduate in Mechanical Engineering and Post Graduate in Manufacturing Technology. Served in the Indian Airforce for 23 years. An expert in maintenance of MI-8 and MI-17 helicopters and overhaul of aero-engines during which gained expertise in machining, NDT, balancing of rotors, micrometry, thermal spraying, heat treatment, formulation of work packages and records.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
+            const formData = new FormData(this);
+            
+            // Submits to your verified Formspree ID
+            fetch('https://formspree.io/f/mjgdlvep', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent.');
+                    this.reset(); // Clear the form fields upon success
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            })
+            .catch(error => {
+                alert('Network error. Please try again later.');
+            })
+            .finally(() => {
+                submitButton.textContent = 'Send Message';
+                submitButton.disabled = false;
+            });
+        });
+    </script>
 
 </body>
 </html>
