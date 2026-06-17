@@ -346,7 +346,7 @@ nav a.active{
 /* --- Products Section Architecture (Premium Tech Blue Image BG Theme) --- */
 .prds-section {
     padding: 100px 0;
-    background-image: url(./img_files/download.jpeg);
+    background-image: url(./img_files/download\ \(2\).jpeg);
     background-size: 100% 100%;
     background-attachment: scroll; 
     color: #ffffff;
