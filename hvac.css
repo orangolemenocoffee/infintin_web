@@ -360,7 +360,7 @@ nav a.active{
     min-height: 580px;
     background-color: whitesmoke;
     position: relative;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+     font-family: 'Poppins', sans-serif;
 }
 
 /* Sidebar Lock & Scroll mechanics */
@@ -432,7 +432,6 @@ nav a.active{
     flex-direction: column;
     justify-content: center;
     z-index: 2;
-    background-color: whitesmoke;
 }
 
 .main-heading {
@@ -442,7 +441,7 @@ nav a.active{
     line-height: 0.95;
     margin-bottom: 28px;
     letter-spacing: -1px;
-    font-family: Georgia, serif;
+     font-family: 'Poppins', sans-serif;
 }
 
 .description {

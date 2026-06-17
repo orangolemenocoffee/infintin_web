@@ -7,52 +7,141 @@
 
     <link rel="stylesheet" href="hvac.css">
 </head>
+<style>
+   .body{
+    background-color: whitesmoke;
+     font-family: 'Poppins', sans-serif;
+   }
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    width:100%;
+    background:#f5f5f5;
+
+    margin:0;
+    padding:0;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container{
+    width:100%;
+    padding:15px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:65px;
+    width:auto;
+    display:block;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+
+    transition:color .3s ease;
+}
+
+nav a:hover{
+    color:#0046be;
+}
+
+nav a.active{
+    color:#0046be;
+}
+@media (max-width: 992px){
+
+    .nav-container{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .logo{
+        margin-bottom: 15px;
+    }
+
+    .logo img{
+        height: auto;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 25px;
+        max-width: 500px;
+    }
+
+    nav a{
+        width: auto; /* Remove the 30% width */
+        text-align: center;
+        font-size: 10px;
+    }
+}
+
+</style>
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="nav-container">
-
+    <header style="position: sticky; top: 0; z-index: 1000; margin-bottom: 0; padding-bottom: 0;">
+        <div class="container nav-container">
             <div class="logo">
-                <img src="./img_files/logov1.png" alt="INFINITIN Logo">
+                <img src="./images/logov1.png" alt="INFINITIN Logo">
             </div>
-
             <nav>
-                <a href="./index.html">Home</a>
-                <a href="./index.html#aboutus">About Us</a>
-                <a href="./index.html#tech-edge">Technology</a>
-                <a href="./hvac.html" class="active">Precision Motors for HVAC & Automation</a>
+                <a href="./index.html" class="active">Home</a>
+                <a href="index.html#aboutus">About Us</a>
+                <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
                 <a href="./contact.html">Contact Us</a>
             </nav>
-
         </div>
     </header>
 
-<div style="display: flex; width: 100%; max-width: 1600px; min-height: 500px; background-color: #ffffff; overflow: hidden; position: relative;">
+<div style="display: flex; width: 100%; max-width: 1600px; min-height: 500px; background-color: #0046be; overflow: hidden; position: relative;">
 
     <div class="content-side" style="flex: 1.2; padding: 60px 40px 60px 60px; display: flex; flex-direction: column; justify-content: center; z-index: 2;">
-        <div class="tagline" style="color: #d32f2f; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">
+        <div class="tagline" style="color: #ccff00; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">
             RARE-EARTH-FREE • BLDC + SRM
         </div>
-        <h1 class="main-heading" style="color: #111111; font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px;">
+        <h1 class="main-heading" style="text-transform: uppercase;color: white; font-size: 42px; font-weight: 800; line-height: 1.15; margin-bottom: 16px;">
             Precision Motors for<br>HVAC & Automation
         </h1>
-        <p class="description" style="color: #555555; font-size: 15px; line-height: 1.6; margin-bottom: 35px; max-width: 420px;">
+        <p class="description" style="color: whitesmoke; font-size: 15px; line-height: 1.6; margin-bottom: 35px; max-width: 420px; ">
             High-efficiency BLDC & SRM (Switched Reluctance Motor) motors with integrated control — zero rare earth, ~91.69% efficient, engineered and made in India.
         </p>
-        <a href="#products" class="cta-button" style="display: inline-block; align-self: flex-start; background-color: #1e1e1e; color: #ffffff; text-decoration: none; padding: 16px 36px; border-radius: 12px; font-weight: 600; font-size: 15px;">
+        <a href="#products" class="btn-cta" style="display: inline-block; align-self: flex-start; color: #ffffff; text-decoration: none; padding: 16px 36px; border-radius: 12px; font-weight: 600; font-size: 15px;">
             Our Products
         </a>
     </div>
         
-    <div class="image-side" style="position: relative; flex: 1; min-height: 500px; background-color: #ffffff; overflow: hidden;">
+    <div class="image-side" style="position: relative; flex: 1; min-height: 500px; background-color: #0046be; overflow: hidden;">
         <div class="dark-bg-shape" style="position: absolute; right: 0; bottom: 0; width: 100%; height: 100%; background-color: #1e1e1e; border-top-left-radius: 45% 75%; border-bottom-left-radius: 15% 25%; z-index: 1;"></div>
         
         <div class="product-circle-frame" style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%); width: 320px; height: 320px; background-color: #f0f0f0; border-radius: 50%; border: 14px solid #ffffff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); z-index: 2; overflow: hidden; display: flex; justify-content: center; align-items: center;">
             <img src="./img_files/motor.png" alt="High-efficiency BLDC & SRM Motor" style="width: 100%; height: 100%; object-fit:cover;">
         </div>
 
-        <div class="floating-accent-top" style="position: absolute; top: 12%; left: 5%; width: 45px; height: 45px; background-color: #f2a104; border-radius: 50%; opacity: 0.85; z-index: 2;"></div>
+        <div class="floating-accent-top" style="position: absolute; top: 12%; left: 5%; width: 45px; height: 45px; background-color: white; border-radius: 50%; opacity: 1; z-index: 2;"></div>
         <div class="floating-accent-bottom" style="position: absolute; bottom: 10%; right: 20%; width: 80px; height: 45px; background-color: #4caf50; border-radius: 50% 15%; transform: rotate(-15deg); opacity: 0.9; z-index: 2;"></div>
     </div>
 
@@ -248,7 +337,41 @@ updateDots();
             </div>
         </div>
 
-        <div class="product-row">
+        <div class="product-row" style="background-color: white;">
+            <div class="content-side">
+                <h1 class="main-heading">PRD <br> 2</h1>
+                <p class="description">
+                    Add description details for your second product here. It shares the identical card layout rules but stacks cleanly below the first item without overflowing sideways.
+                </p>
+                
+                <div class="specs-panel">
+                    <div class="spec-item">
+                        <span class="spec-label">SPECIFICATION</span>
+                        <span class="spec-value">MODEL</span>
+                    </div>
+                    <div class="spec-divider"></div>
+                    <div class="spec-item">
+                        <span class="spec-label">SPEED</span>
+                        <span class="spec-value">---</span>
+                    </div>
+                    <div class="spec-divider"></div>
+                    <div class="spec-item">
+                        <span class="spec-label">EFFICIENCY</span>
+                        <span class="spec-value">****</span>
+                    </div>
+                </div>
+
+                <a href="./contact.html" class="cta-button">KNOW MORE</a>
+            </div>
+                
+            <div class="image-side">
+                <div class="product-circle-frame">
+                    <img src="./img_files/Fan coil motor.png" alt="Blueberry Pancakes Platter" class="main-product-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="product-row" style="background-color: whitesmoke;">
             <div class="content-side">
                 <h1 class="main-heading">PRD <br> 2</h1>
                 <p class="description">
