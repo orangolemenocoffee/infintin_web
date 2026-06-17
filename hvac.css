@@ -527,3 +527,125 @@ nav a.active{
     height: 90%;
     object-fit: contain;
 }
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE FIXES
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Hero Block Viewport Reset */
+    div[style*="display: flex"][style*="max-width: 1600px"] {
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding-bottom: 40px;
+    }
+
+    div[style*="display: flex"][style*="max-width: 1600px"] .content-side {
+        padding: 40px 24px 20px 24px !important;
+    }
+
+    div[style*="display: flex"][style*="max-width: 1600px"] .main-heading {
+        font-size: 32px !important;
+    }
+
+    div[style*="display: flex"][style*="max-width: 1600px"] .image-side {
+        min-height: 340px !important;
+        margin-top: 20px;
+    }
+
+    /* Adjust the hero masked circle placement for mobile viewports */
+    div[style*="display: flex"][style*="max-width: 1600px"] .product-circle-frame {
+        width: 260px !important;
+        height: 260px !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* 2. Product Row Vertical Stack Setup */
+    .hero-card-container {
+        min-height: auto !important;
+        padding: 20px 0;
+    }
+
+    .products {
+        margin-left: 0 !important; /* Drops sidebar clear space on mobile */
+        gap: 60px !important;
+    }
+
+    .product-row {
+        flex-direction: column-reverse !important; /* Image on top, details below */
+        min-height: auto !important;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .product-row .content-side {
+        padding: 30px 15px !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    .product-row .main-heading {
+        font-size: 36px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .product-row .description {
+        max-width: 100% !important;
+    }
+
+    /* Center metrics panels dynamically */
+    .specs-panel {
+        justify-content: center;
+        gap: 16px !important;
+        margin-bottom: 30px !important;
+        width: 100%;
+    }
+
+    .spec-value {
+        font-size: 15px !important;
+    }
+
+    .product-row .cta-button {
+        align-self: center !important; /* Center click action targets */
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    /* 3. Image Frame Containment Fixes */
+    .product-row .image-side {
+        width: 100% !important;
+        height: 300px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .product-row .product-circle-frame {
+        position: relative !important;
+        width: 260px !important;
+        height: 260px !important;
+        right: 0 !important;
+        left: 0 !important;
+        margin: 0 auto !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+    }
+}
+
+/* Micro-screens adjustment (Small Phones) */
+@media (max-width: 480px) {
+    .specs-panel {
+        flex-direction: column;
+        gap: 12px !important;
+    }
+    
+    .spec-divider {
+        display: none !important; /* Drop dividing line flags on tiny widths */
+    }
+    
+    .spec-item {
+        align-items: center;
+    }
+}
