@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap');
+
+/* GLOBAL RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        135deg,
+        #00a651 0%,
+        #ffffff 50%,
+        #0046be 100%
+    );
+    overflow-x: hidden;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FIXED HEADER WITH LAYER FIXES */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Forces header on top of the 3D depth space */
+    background: #ffffff; /* Stretches crisp white clean across full width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Keeps menu compressed to prevent wrapping on small displays */
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevents text elements like 'HVAC & Automation' from snapping onto multiple rows */
+    transition: color .3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #0046be;
+}
+
+/* RESPONSIVE NAVBAR NAV */
+@media (max-width: 1100px) {
+    .nav-container {
+        padding: 15px 20px;
+    }
+    nav {
+        gap: 15px;
+    }
+    nav a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-container {
+        flex-direction: column; 
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav {
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 10px 12px;
+        flex-wrap: wrap;
+    }
+}
+
+/* 3D SCENE SETUP */
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px; 
+    margin-top: 120px; /* Pushes content down clean beneath fixed navigation element */
+}
+
+.carousel {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* CARD / VIDEO WRAPPER STYLES */
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 30px 60px var(--glass-shadow);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* VIDEO FORMATTING */
+.video-container {
+    width: 100%;
+    height: 75%;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; 
+}
+
+/* GLASSMORPHIC INFO PANEL */
+.info-panel {
+    padding: 12px 18px;
+    flex-grow: 0;
+    min-height: 60px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.date {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    color: #ffffff;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin: 12px 0 0 0;
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* 3D POSITION STATES */
+.card.active {
+    transform: translate3d(0, 0, 80px) scale(1);
+    z-index: 10;
+    opacity: 1;
+}
+
+.card.left-1 {
+    transform: translate3d(-220px, 0, -80px) rotateY(25deg) scale(0.8);
+    z-index: 5;
+    opacity: 0.9;
+}
+.card.left-2 {
+    transform: translate3d(-460px, 0, -200px) rotateY(35deg) scale(0.7);
+    z-index: 4;
+    opacity: 0.6;
+}
+
+.card.right-1 {
+    transform: translate3d(220px, 0, -80px) rotateY(-25deg) scale(0.8);
+    z-index: 5;
+    opacity: 0.9;
+}
+.card.right-2 {
+    transform: translate3d(460px, 0, -200px) rotateY(-35deg) scale(0.7);
+    z-index: 4;
+    opacity: 0.6;
+}
+
+.card.hidden-left {
+    transform: translate3d(-600px, 0, -300px) rotateY(45deg) scale(0.5);
+    opacity: 0;
+    z-index: 1;
+}
+.card.hidden-right {
+    transform: translate3d(600px, 0, -300px) rotateY(-45deg) scale(0.5);
+    opacity: 0;
+    z-index: 1;
+}
