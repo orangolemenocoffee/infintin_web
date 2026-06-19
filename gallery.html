@@ -147,9 +147,220 @@
         });
     </script>
 
+<!-- START OF INFINTIN SERVICES SECTION -->
+<div id="infintin-services-section">
+    <style>
+        /* Scoped styles specifically for this section to avoid bleeding into other divs */
+        #infintin-services-section {
+            --inf-bg-cream: #fbf9e7;
+            --inf-bg-blue: #1e88e5;
+            --inf-bg-light-blue: #e3f2fd;
+            --inf-text-dark: #1a3a5f;
+            --inf-text-light: #ffffff;
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--inf-bg-cream);
+            color: var(--inf-text-dark);
+            line-height: 1.6;
+            padding: 40px 0 0 0;
+            box-sizing: border-box;
+        }
+
+        #infintin-services-section * {
+            box-sizing: border-box;
+        }
+
+        /* --- Header Section --- */
+        #infintin-services-section .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 20px 40px;
+        }
+
+        #infintin-services-section .header-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1a629d;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+
+        #infintin-services-section .header-divider {
+            width: 100%;
+            height: 3px;
+            background-color: #1a629d;
+            margin-bottom: 25px;
+        }
+
+        #infintin-services-section .header-description {
+            font-size: 1.1rem;
+            color: #4a6b82;
+            max-width: 550px;
+            margin-bottom: 40px;
+        }
+
+        /* --- Section 01 (Blue Block) --- */
+        #infintin-services-section .section-blue {
+            background-color: var(--inf-bg-blue);
+            color: var(--inf-text-light);
+            padding: 60px 0;
+        }
+
+        #infintin-services-section .section-blue .inner-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* --- Section 02 (Light Blue Block) --- */
+        #infintin-services-section .section-light {
+            background-color: var(--inf-bg-light-blue);
+            color: var(--inf-text-dark);
+            padding: 60px 0;
+        }
+
+        #infintin-services-section .section-light .inner-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse; /* Matches the layout structure in image_4a8342.png */
+            gap: 50px;
+        }
+
+        /* --- Content Layout --- */
+        #infintin-services-section .content-block {
+            flex: 1;
+        }
+
+        #infintin-services-section .service-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        #infintin-services-section .service-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            text-transform: capitalize;
+        }
+
+        #infintin-services-section .service-list {
+            padding-left: 20px;
+            font-size: 1.15rem;
+            margin: 0;
+        }
+
+        #infintin-services-section .service-list li {
+            margin-bottom: 10px;
+        }
+
+        /* --- Placeholder Graphic Boxes --- */
+        #infintin-services-section .graphic-placeholder {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #infintin-services-section .circle-graphic {
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            font-weight: bold;
+        }
+
+        #infintin-services-section .square-graphic {
+            width: 250px;
+            height: 250px;
+            background: rgba(30, 136, 229, 0.1);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed rgba(30, 136, 229, 0.3);
+            font-weight: bold;
+            color: var(--inf-bg-blue);
+        }
+
+        /* --- Responsive Layout Breakpoint --- */
+        @media (max-width: 768px) {
+            #infintin-services-section .section-blue .inner-container, 
+            #infintin-services-section .section-light .inner-container {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            #infintin-services-section .service-list {
+                text-align: left;
+                display: inline-block;
+            }
+            #infintin-services-section .header-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+
+    <!-- Header Block Component -->
+    <div class="header-container">
+        <div class="header-title">Services provided in<br>INFINTIN</div>
+        <div class="header-divider"></div>
+        <p class="header-description">
+            As an engineering and technology partner, we look for ways to improve your design accuracy, streamline workflows, and optimize overall performance. Here are the core professional services we offer to accelerate your project goals:
+        </p>
+    </div>
+
+    <!-- Section 01: Core Engineering Analysis -->
+    <div class="section-blue">
+        <div class="inner-container">
+            <div class="graphic-placeholder">
+                <!-- If you have graphics similar to image_4a8342.png, replace this div with an <img> tag -->
+                <div class="circle-graphic">Analysis Illustration</div>
+            </div>
+            <div class="content-block">
+                <div class="service-number">01</div>
+                <div class="service-title">Advanced Simulation & Analysis</div>
+                <ul class="service-list">
+                    <li>Electromagnetic analysis</li>
+                    <li>Structural analysis</li>
+                    <li>Thermal analysis</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 02: Design & Infrastructure Solutions -->
+    <div class="section-light">
+        <div class="inner-container">
+            <div class="graphic-placeholder">
+                <!-- If you have graphics similar to image_4a8342.png, replace this div with an <img> tag -->
+                <div class="square-graphic">Design Illustration</div>
+            </div>
+            <div class="content-block">
+                <div class="service-number">02</div>
+                <div class="service-title">Systems & Hardware Design</div>
+                <ul class="service-list">
+                    <li>PCB design</li>
+                    <li>HVAC solutions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF INFINTIN SERVICES SECTION -->
+
 <!-- IMAGES -->
 <section class="products">
-<h2 style="color: #0046be; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">IMAGES</h2>
+<h2 style="color: #0046be; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; " class="header-title">IMAGES</h2>
 
     <div class="product-card">
         <img src="./img_files/15kw motor.png" alt="SRM Motor">
@@ -195,7 +406,7 @@
 
     <div class="product-card">
         <video autoplay muted loop playsinline>
-    <source src="./img_files/product1.mp4" type="video/mp4">
+    <source src="./img_files/" type="video/mp4">
 </video>
         <h3>SRM Motor</h3>
         <button>VIEW MORE</button>
