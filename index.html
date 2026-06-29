@@ -8,23 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="./index.css" rel="stylesheet">
+    
 </head>
 <body style="margin: 0; padding: 0;">
 
-    <header style="position: sticky; top: 0; z-index: 1000; margin-bottom: 0; padding-bottom: 0;">
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="./img_files/logov1.png" alt="INFINITIN Logo">
-            </div>
-            <nav>
-                <a href="./index.html" class="active">Home</a>
-                <a href="#tech-edge">Technology</a>
-                <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
-                <a href="./gallery.html">Services & Gallery</a>
-                <a href="./contact.html">Contact Us</a>
-            </nav>
+  <header class="header">
+    <div class="container nav-container">
+
+        <div class="logo">
+            <img src="./images/logov1.png" alt="INFINITIN Logo">
         </div>
-    </header>
+
+        <!-- Hamburger Button -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <a href="./index.html" class="active">Home</a>
+            <a href="index.html#tech-edge">Technology</a>
+            <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
+            <a href="./gallery.html">Services & Gallery</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
 
     <!-- 50/50 Video Split Hero Section (Height restricted to 400px with zero structural margins) -->
     <section class="hero-split" style="display: flex; width: 100%; height: 400px; margin: 0 !important; padding: 0 !important; overflow: hidden;">
@@ -44,7 +54,7 @@
         </div>
     </section>
 
-    <!-- About Us Section (Pulled flush against the video section with zero top margins) -->
+    <!-- About Us Section  -->
     <section id="aboutus" class="aboutus-section" style="margin-top: 0 !important; padding-top: 60px;">
         <div class="container">
             <div class="aboutus-grid">
@@ -97,7 +107,7 @@
                 <div class="aboutus-visual">
                     <div class="blob-shape-bg"></div>
                     <img src="./img_files/Motor-1.png" alt="INFINITIN Motor Graphic" class="aboutus-img">
-                    <div class="dot-pattern"></div>
+                    
                 </div>
             </div>
         </div>
@@ -412,6 +422,53 @@
 
     </div>
 </footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
+document.addEventListener("click", function(e) {
+    const menu = document.getElementById("navMenu");
+    const button = document.querySelector(".menu-toggle");
+
+    if (!menu.contains(e.target) &&
+        !button.contains(e.target)) {
+        menu.classList.remove("active");
+    }
+});
+</script>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    // Change icon
+    menuToggle.innerHTML = navbar.classList.contains("active") ? "✖" : "☰";
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function(e){
+    if(
+        !navbar.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ){
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    }
+});
+</script>
 
 </body>
 </html>

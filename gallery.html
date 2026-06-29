@@ -8,21 +8,29 @@
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="./images/logov1.png" alt="INFINITIN Logo">
-            </div>
-            <nav>
-                <a href="./index.html">Home</a>
-                <a href="index.html#tech-edge">Technology</a>
-                <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
-                <a href="./gallery.html" class="active">Services & Gallery</a>
-                <a href="./contact.html">Contact Us</a>
-            </nav>
-        </div>
-    </header>
+    <header class="header">
+    <div class="container nav-container">
 
+        <div class="logo">
+            <img src="./images/logov1.png" alt="INFINITIN Logo">
+        </div>
+
+        <!-- Hamburger Button -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <a href="./index.html" class="active">Home</a>
+            <a href="index.html#tech-edge">Technology</a>
+            <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
+            <a href="./gallery.html">Services & Gallery</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
     <div class="carousel-container">
         <div class="carousel" id="carousel" 
         style="background-color: linear-gradient(        135deg,        #00a651 0%,        #ffffff 50%,        #0046be 100%    );">
@@ -396,7 +404,36 @@
 
 
 </section>    
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
 
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    // Change icon
+    menuToggle.innerHTML = navbar.classList.contains("active") ? "✖" : "☰";
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function(e){
+    if(
+        !navbar.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ){
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    }
+});
+</script>
 
 
 </body>

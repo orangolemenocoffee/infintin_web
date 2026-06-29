@@ -16,23 +16,34 @@
   
 
 </style>
+
+
 <body>
 
-    <!-- HEADER -->
-    <header style="position: sticky; top: 0; z-index: 1000; margin-bottom: 0; padding-bottom: 0;">
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="./images/logov1.png" alt="INFINITIN Logo">
-            </div>
-            <nav>
-                <a href="./index.html" class="active">Home</a>
-                <a href="index.html#tech-edge">Technology</a>
-                <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
-                 <a href="./gallery.html">Services & Gallery</a>
-                <a href="./contact.html">Contact Us</a>
-            </nav>
+   <!-- HEADER -->
+<header class="header">
+    <div class="container nav-container">
+
+        <div class="logo">
+            <img src="./images/logov1.png" alt="INFINITIN Logo">
         </div>
-    </header>
+
+        <!-- Hamburger Button -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <a href="./index.html" class="active">Home</a>
+            <a href="index.html#tech-edge">Technology</a>
+            <a href="./hvac.html">Precision Motors for HVAC & Automation</a>
+            <a href="./gallery.html">Services & Gallery</a>
+            <a href="./contact.html">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
 
 <div style="display: flex; width: 100%; max-width: 1600px; min-height: 500px; background-color: #0046be; overflow: hidden; position: relative;">
 
@@ -330,7 +341,36 @@ updateDots();
 
     </div> </div>
 
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
 
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+
+    // Change icon
+    menuToggle.innerHTML = navbar.classList.contains("active") ? "✖" : "☰";
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", function(e){
+    if(
+        !navbar.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ){
+        navbar.classList.remove("active");
+        menuToggle.innerHTML = "☰";
+    }
+});
+</script>
 
 
 </body>
