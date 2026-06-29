@@ -1,4 +1,4 @@
-/* Hide hamburger on desktop */
+
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -84,23 +84,37 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows navigation bar to wrap gracefully if squeezed */
-    gap: 15px;
 }
 .logo img {
     height: auto;
     max-height: 55px; /* Ensures logo shrinks gracefully on mobile viewports */
     display: block;
 }
+nav a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+
+    transition:color .3s ease;
+}
+
+nav a:hover{
+    color:#0046be;
+}
 
 nav a {
+    
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     color: #666;
     letter-spacing: 0.5px;
     transition: color 0.3s;
-    white-space: nowrap; /* Prevents text elements from breaking onto 2 separate lines */
+    white-space: nowrap;
+     margin-left: 25px;
 }
 nav a:hover, nav a.active {
     color: #0052cc;
