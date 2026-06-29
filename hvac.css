@@ -787,8 +787,6 @@ nav a:hover{
 nav a.active{
     color:#0046be;
 }
-
-
 /* Hamburger */
 .menu-toggle{
     display:none;
